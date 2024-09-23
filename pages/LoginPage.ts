@@ -33,6 +33,9 @@ export default class LoginPage {
     await this.loginDropdown().click();
     await this.loginOption(option).click();
   }
+  /**
+   * Logs into the Demo app
+   */
   async doDemoLogin() {
     await this.goToLoginPage();
     await this.cookiesModal.closeCookiesModal();

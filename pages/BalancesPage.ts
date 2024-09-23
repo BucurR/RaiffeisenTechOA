@@ -19,6 +19,10 @@ export default class BalancesPage {
       timeout: 2 * 60 * 1000,
     });
   }
+  /**
+   * Opens the Balance Details tab for specified account
+   * @param iban 
+   */
   async selectAccountByIBAN(iban:string){
     await this.accountRowLocatorByIBAN(iban).click()
   }
