@@ -9,6 +9,23 @@ I also left out some tests that would target specific components like the date p
 1. What fields need to be included in the account details?
 2. Should the navigation arrows at the bottom of the Balance Details page be displayed if user has only one account?
 
+## Issues  
+### Relative filter for past 3 weeks/21 days is missing  
+Severity: low  
+Priority: medium  
+FE version:  
+BE version:  
+**Steps to reproduce**  
+Access corporate portal  
+Go to balances  
+Select any account  
+In the account balances table, select the date filter  
+Select relative filtering  
+
+Expected: User should have an option to set a relative filter for the past 21 days/3 weeks.
+Actual : The option is missing  
+
+
 ## Test Cases
 
 **Prerequisites :**

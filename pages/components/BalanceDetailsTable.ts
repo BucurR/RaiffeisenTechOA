@@ -1,5 +1,5 @@
 import { expect, Page } from "@playwright/test";
-import { parseCustomDate } from "../../helpers/helpers";
+import { parseCustomDate } from "@helpers/helpers";
 
 export default class BalanceDetailsTable {
   private page: Page;

@@ -8,5 +8,11 @@ Feature: test Balance Details Functionality
   Scenario: User downloads a csv
     Given User navigates to the Balance Details View
     When User clicks on the export button
-    Then CSV file is downlaoded
+    Then File is downloaded
+    And Contents of the file are correct
+
+  Scenario: User downloads a pdf
+    Given User navigates to the Balance Details View
+    When User clicks on the print button
+    Then File is downloaded
     And Contents of the file are correct

@@ -1,6 +1,6 @@
 import { After, Before, setDefaultTimeout } from "@cucumber/cucumber";
 import { Browser, BrowserContext, chromium, Page } from "@playwright/test";
-import LoginPage from "../../../pages/LoginPage";
+import LoginPage from "@pages/LoginPage";
 
 let browser: Browser;
 let browserCtxt: BrowserContext;

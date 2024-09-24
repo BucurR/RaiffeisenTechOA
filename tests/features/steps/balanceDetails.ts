@@ -1,11 +1,11 @@
 import { Given, When, Then } from "@cucumber/cucumber";
 import { page } from "./base";
 import fs from "fs";
-import PortalPage from "../../../pages/PortalPage";
-import BalancesPage from "../../../pages/BalancesPage";
-import BalanceDetailsPage from "../../../pages/BalanceDetailsPage";
-import { relativeDateOption } from "../../../pages/components/BalanceDetailsTable";
-import { getRandomRelativeDateOption } from "../../../helpers/helpers";
+import PortalPage from "@pages/PortalPage";
+import BalancesPage from "@pages/BalancesPage";
+import BalanceDetailsPage from "@pages/BalanceDetailsPage";
+import { relativeDateOption } from "@pages/components/BalanceDetailsTable";
+import { getRandomRelativeDateOption } from "@helpers/helpers";
 import path from "path";
 import { Download, expect } from "@playwright/test";
 
@@ -40,8 +40,14 @@ When("User clicks on the export button", async function () {
     balanceDetailsPage.startExport(),
   ]);
 });
-
-Then("CSV file is downlaoded", async function () {
+When('User clicks on the print button', async function () {
+  [download] = await Promise.all([
+    balanceDetailsPage.waitForDownloadEvent(),
+    balanceDetailsPage.printDetails(),
+  ]);
+  
+});
+Then("File is downloaded", async function () {
   const downloadPath = path.join(
     __dirname,
     "downloads",
