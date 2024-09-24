@@ -10,3 +10,4 @@ POM pages can be found under ./pages
 POM components can be found under ./pages/components  
 Feature files are found under /tests/features  
 Test steps are found under tests/features/steps  
+Test case design can be found under TestCaseDesign.md
