@@ -1,7 +1,8 @@
 import { expect, Page } from "@playwright/test";
-import { parseCustomDate } from "@helpers/helpers";
+import { parseCustomDate } from "../../helpers/helpers";
 
-export default class BalanceDetailsTable {
+
+export  class BalanceDetailsTable {
   private page: Page;
   private iframeLocator = () => {
     return this.page.frameLocator('iframe[name="appFrame"]');

@@ -1,13 +1,13 @@
 import { Given, When, Then } from "@cucumber/cucumber";
-import { page } from "./base";
-import fs from "fs";
-import PortalPage from "@pages/PortalPage";
-import BalancesPage from "@pages/BalancesPage";
-import BalanceDetailsPage from "@pages/BalanceDetailsPage";
-import { relativeDateOption } from "@pages/components/BalanceDetailsTable";
-import { getRandomRelativeDateOption } from "@helpers/helpers";
-import path from "path";
 import { Download, expect } from "@playwright/test";
+import path from "path";
+import { getRandomRelativeDateOption } from "../../../helpers/helpers";
+import { BalanceDetailsPage } from "../../../pages/BalanceDetailsPage";
+import { BalancesPage } from "../../../pages/BalancesPage";
+import { relativeDateOption } from "../../../pages/components/BalanceDetailsTable";
+import { PortalPage } from "../../../pages/PortalPage";
+import { page } from "./base";
+import fs from "fs"
 
 let corporatePortalPage: PortalPage;
 let balancePage: BalancesPage;

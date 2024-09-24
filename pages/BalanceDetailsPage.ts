@@ -1,9 +1,8 @@
-import { expect, Page } from "@playwright/test";
-import BalanceDetailsTable, {
-  relativeDateOption,
-} from "@components/BalanceDetailsTable";
+import { Page, expect } from "@playwright/test";
+import { BalanceDetailsTable, relativeDateOption } from "./components/BalanceDetailsTable";
 
-export default class BalanceDetailsPage {
+
+export class BalanceDetailsPage {
   private page: Page;
   private balanceDetailsTable: BalanceDetailsTable;
   private iframeLocator = () => {
@@ -19,18 +18,20 @@ export default class BalanceDetailsPage {
       '[id="printExport:printExportForm:exportButton"]'
     );
   };
-  private printBtnLocator = ()=>{
-    return this.iframeLocator().locator('[id="printExport:printExportForm:printButton"]')
-  }
+  private printBtnLocator = () => {
+    return this.iframeLocator().locator(
+      '[id="printExport:printExportForm:printButton"]'
+    );
+  };
   constructor(page: Page) {
     this.page = page;
     this.balanceDetailsTable = new BalanceDetailsTable(page);
   }
   async startExport() {
-     this.exportBtnLocator().click();
+    this.exportBtnLocator().click();
   }
-  async printDetails(){
-     this.printBtnLocator().click()
+  async printDetails() {
+    this.printBtnLocator().click();
   }
   async waitForDownloadEvent() {
     return this.page.waitForEvent("download");

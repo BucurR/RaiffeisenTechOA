@@ -7,12 +7,6 @@
     "moduleResolution": "node",
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "baseUrl": "./",
-    "paths": {
-      "@components/*": ["pages/components/*"],
-      "@pages/*": ["pages/*"],
-      "@helpers/*": ["helpers/*"]
-    }
   },
   "include": ["./**/*.ts"],
   "exclude": ["node_modules"]

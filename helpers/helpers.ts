@@ -1,4 +1,5 @@
-import { relativeDateOption } from "@components/BalanceDetailsTable";
+import { relativeDateOption } from "../pages/components/BalanceDetailsTable";
+
 /**
  * Selects a relative filter option for dates
  * @returns relativeDateOption

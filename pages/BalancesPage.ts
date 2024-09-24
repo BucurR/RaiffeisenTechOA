@@ -1,6 +1,6 @@
 import { expect, Page } from "@playwright/test";
 
-export default class BalancesPage {
+export  class BalancesPage {
   private page: Page;
   private pageHeaderLocator = () => {
     return this.page

@@ -1,6 +1,7 @@
 import { Page } from "@playwright/test";
 
-export default class PortalPage {
+
+export  class PortalPage {
   private page: Page;
   private internetBankingBtnLocator = () => {
     return this.page

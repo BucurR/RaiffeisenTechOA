@@ -1,8 +1,10 @@
-import { expect, Page } from "@playwright/test";
-import { CookiesIframe } from "@components/CookiesIframe";
-import { DemoLoginIframe } from "@components/DemoLoginFrame";
+import { Page, expect } from "@playwright/test";
+import { CookiesIframe } from "./components/CookiesIframe";
+import { DemoLoginIframe } from "./components/DemoLoginFrame";
 
-export default class LoginPage {
+
+
+export  class LoginPage {
   private page: Page;
   private cookiesModal: CookiesIframe;
   private demoLoginFrame: DemoLoginIframe;
